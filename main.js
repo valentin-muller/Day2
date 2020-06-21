@@ -13,8 +13,11 @@ let gamespeed = 2;
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillRect(10, 10, 50, 50);
+    // ctx.fillRect(10, 10, 50, 50);
+    bird.update();
+    bird.draw();
     requestAnimationFrame(animate);
+    angle += 0.12;
 }
 animate();
 
